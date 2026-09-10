@@ -1,0 +1,5 @@
+feat: feature
+fix: fix
+Chore: admin work (creating folders)
+docs: documenting
+refactor: changing existing code
