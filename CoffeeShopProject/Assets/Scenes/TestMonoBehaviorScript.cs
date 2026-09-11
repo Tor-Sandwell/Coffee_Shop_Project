@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestScript : MonoBehaviour
+public class TestMonoBehaviorScript : MonoBehaviour
 {
     void Start()
     {
