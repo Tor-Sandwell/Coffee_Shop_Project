@@ -2,8 +2,8 @@
 
 public class CoffeeShopTest : MonoBehaviour
 {
-    public int CoffeesSold = 6;
-    public float CoffeePrice =3.50f;
+    public int CoffeesSold;
+    public float CoffeePrice = 3.50f;
     public int CoffeesOrdered = 3;
     void Start()
     {
