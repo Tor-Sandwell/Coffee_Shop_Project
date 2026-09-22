@@ -616,10 +616,6 @@ MonoBehaviour:
   coffeeAmount: 0
   costOfCoffee: 3.99
   totalOrderCost: 0
-  x: 1
-  y: 0
-  z: 0
-  i: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +696,50 @@ Transform:
   m_Children:
   - {fileID: 829381448}
   - {fileID: 2046970128}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1596672468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596672470}
+  - component: {fileID: 1596672469}
+  m_Layer: 0
+  m_Name: CalculatingForN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1596672469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596672468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7a65c360cf70140990d376a7ebc2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CalculatingForN
+--- !u!4 &1596672470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596672468}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.42863, y: 0.5, z: 0.22699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747323115
@@ -1480,3 +1520,4 @@ SceneRoots:
   - {fileID: 1105930531838768126}
   - {fileID: 2058341891}
   - {fileID: 1747323122}
+  - {fileID: 1596672470}
