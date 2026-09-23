@@ -1,48 +1,46 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using  Vector3 = UnityEngine.Vector3;
 
-public class TimerCountdown : MonoBehaviour
+public class DistanceTracker : MonoBehaviour
 {
+    private GameObject targetPlayer;
+    private GameObject targetObject;    
     
     void Start()//calls countdown function
     {
         if (targetObject == null)
         {
-            targetPlayer = GameObject.Find("player");
             targetObject = GameObject.Find("object");
         }
         if (targetObject != null)
         {
-            vector3 playerPosition = targetPlayer.transform.position;
-            vector3 objectPosition = targetObject.transform.position;
+            Vector3 objectPosition = targetObject.transform.position;
         }
         else
         {
             Debug.Log("Target object not found.");
         }
-        if (targetObject == null)
+        if (targetPlayer == null)
         {
             targetPlayer = GameObject.Find("player");
-            targetObject = GameObject.Find("object");
         }
-            StartCoroutine(Interval());
-
+        else
         {
-            vector3 playerPosition = targetPlayer.transform.position;
-            vector3 objectPosition = targetObject.transform.position;
+            Debug.Log("Target player not found.");
         }
-
         {
-            Debug.Log("Target object not found.");
+            Vector3 playerPosition = targetPlayer.transform.position;
+            Vector3 objectPosition = targetObject.transform.position;
         }
-            StartCoroutine(Interval());
+            StartCoroutine(Interval(playerPosition, objectPosition));
 
-    IEnumerator Interval()
-    {
-        Debug.Log(timeRemaining);
+        IEnumerator Interval(Vector3 playerPosition, Vector3 objectPosition)
+        {
             yield return new WaitForSeconds(2);//waits for 2 seconds
-            vector3.Distance = Vector3.Distance(playerPosition, objectPosition);
-            Debug.Log("Distance: " + vector3.Distance);
+            float distance = Vector3.Distance(playerPosition, objectPosition);
+            Debug.Log(distance);
+        }
     }
 }
