@@ -10,21 +10,13 @@ public class DistanceTracker : MonoBehaviour
     
     void Start()//calls countdown function
     {
-        if (targetObject == null)
+        if (targetObject == null)//finds the object in scene
         {
             targetObject = GameObject.Find("object");
-        }
-        else
-        {
-            Debug.Log("Target object not found.");
         }
         if (targetPlayer == null)
         {
             targetPlayer = GameObject.Find("player");
-        }
-        else
-        {
-            Debug.Log("Target player not found.");
         }
         
             Vector3 playerPosition = targetPlayer.transform.position;
@@ -36,9 +28,12 @@ public class DistanceTracker : MonoBehaviour
        
       IEnumerator Interval(Vector3 playerPosition, Vector3 objectPosition)
         {
-            yield return new WaitForSeconds(2);//waits for 2 seconds
-            float distance = Vector3.Distance(playerPosition, objectPosition);
-            Debug.Log("Distance: " + distance);
+            while (true)
+            {
+                yield return new WaitForSeconds(2);//waits for 2 seconds
+                float distance = Vector3.Distance(playerPosition, objectPosition);
+                Debug.Log("Distance: " + distance);
+            }
         }
     }
 }
