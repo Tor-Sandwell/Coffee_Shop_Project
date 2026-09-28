@@ -15,7 +15,7 @@ public class RandomNameGenerator : MonoBehaviour
             }
             else
             {
-                Debug.Log("No names available.");
+                Debug.LogWarning("No names available.");
             }
         }
     }
