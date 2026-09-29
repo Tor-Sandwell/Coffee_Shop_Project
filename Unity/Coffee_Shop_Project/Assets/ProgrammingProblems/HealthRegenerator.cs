@@ -32,11 +32,15 @@ public class HealthRegenerator : MonoBehaviour
 
     IEnumerator HealthRegen()
     {
-        while (CurrentHealth > MaxHealth)
+        HealthRegenerator healthRegenerator = new HealthRegenerator();
+        currentHealth = healthRegenerator.CurrentHealth;
+        maxHealth = healthRegenerator.MaxHealth;
+        while(currentHealth < maxHealth)
         {
             yield return new WaitForSeconds(1);
-            HealthRegenerator.CurrentHealth ++;
-            Debug.Log("current health: " + HealthRegenerator.CurrentHealth);
+            healthRegenerator.CurrentHealth = CurrentHealth + 1;
+            Debug.Log("current health: " + healthRegenerator.CurrentHealth);
+            currentHealth ++;
         }
     }
 }
