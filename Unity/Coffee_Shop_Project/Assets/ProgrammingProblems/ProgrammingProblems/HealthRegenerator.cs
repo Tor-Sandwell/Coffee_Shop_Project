@@ -15,18 +15,18 @@ public class HealthRegenerator : MonoBehaviour
     {
         get
         {
-            return MaxHealth;
+            return maxHealth;
         }
     }
     public int CurrentHealth
     {
         get
         {
-            return CurrentHealth;
+            return currentHealth;
         }
         set
         {
-            CurrentHealth = value;
+            currentHealth = value;
         }
     }
 
