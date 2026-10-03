@@ -1,12 +1,18 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
     float speed = 0.01f;
     float jumpHeight = 0.5f;
+    bool BoostAtive = false;
 
     void Update()
     {
+        if (speed == 0.02f)
+        {
+            Debug.Log("Speed Boost Active");
+        }
         if (Input.GetKey(KeyCode.U))//forward
         {
             Forward(transform.position, speed);
@@ -25,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))//up
         {
-            if (GetComponent<Rigidbody>().velocity.y == 0)
+            if (GetComponent<Rigidbody>().linearVelocity.y == 0)
             {
                 Jump(transform.position, jumpHeight);
             }
