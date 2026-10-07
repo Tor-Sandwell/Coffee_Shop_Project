@@ -31,7 +31,7 @@ public class Player_Movement : MonoBehaviour
             move.y = 5f * Time.deltaTime;
         }
 
-        move.y -= playerYVelocity + 0.1635f * Time.deltaTime;
+        //jumping and gravity
 
         move = this.transform.TransformDirection(move);
         if (Input.GetKey(KeyCode.LeftShift))
