@@ -18,20 +18,9 @@ public class Player_Movement : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    private bool isGrounded()
-    {
-        return controller.isGrounded;
-    }
     public void Update()
     {
         Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime, 0, Input.GetAxisRaw("Vertical") * Time.deltaTime);
-
-        if (isGrounded() && Input.GetKey(KeyCode.Space))
-        {
-            move.y = 5f * Time.deltaTime;
-        }
-
-        //jumping and gravity
 
         move = this.transform.TransformDirection(move);
         if (Input.GetKey(KeyCode.LeftShift))
