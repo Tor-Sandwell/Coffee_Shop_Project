@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class OrderingSystem : MonoBehaviour
@@ -11,8 +12,12 @@ public class OrderingSystem : MonoBehaviour
         biscuit,
     }
 
-    public void Order(OrderStruct OrderItem)
+    public void Order(OrderStruct OrderItem, bool isOrderComplete)
     {
-        
+        if (isOrderComplete)
+        {
+            OrderCompletion.CompleteOrder();
+        }
+        AddItemToOrder.AddItem(OrderItem);
     }
 }
