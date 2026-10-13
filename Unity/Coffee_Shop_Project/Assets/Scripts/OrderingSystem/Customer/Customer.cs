@@ -1,19 +1,74 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 public class Customer : MonoBehaviour
 {
-    public readonly static string drinkType = "rooibos tea";
-    public readonly static int drinkAmount = 1;
-    public readonly static bool orderConfirmed = true;
-    public UnityEvent raiseOrder;
-    void Start()
+    List<OrderStruct> orderList = new List<OrderStruct>();
+    private string _drinkType;
+    private int _drinkAmount;
+    private bool _orderConfirmed;
+    private OrderStruct _item;
+    private int _itemsInOrder = 0;
+    void Order()
     {
-        RequestItem(drinkType, drinkAmount, orderConfirmed);
+        while (!_orderConfirmed)
+        {
+            _itemsInOrder ++;
+            _item = RandomItem();;
+            _orderConfirmed = ConfirmOrder(_itemsInOrder);
+            AddItem(_item, _orderConfirmed);
+        }
     }
-    void RequestItem(string drinkType, int drinkAmount, bool orderConfirmed)
+    private OrderStruct RandomItem()
     {
-        Debug.Log(drinkType + " " + drinkAmount + " " + orderConfirmed);
-        raiseOrder?.Invoke();
+        int quantity = UnityEngine.Random.RandomRange(1, 4);
+        OrderStruct returnItem;
+        returnItem.Quantity = quantity;
+        int itemID = UnityEngine.Random.RandomRange(0, 4);
+        switch (itemID)
+        {
+            case 0:
+            returnItem.ItemName = "esspresso";
+            break;
+            case 1:
+            returnItem.ItemName = "tea";
+            break;
+            case 2:
+            returnItem.ItemName = "iced coffee";
+            break;
+            case 3:
+            returnItem.ItemName = "donut";
+            break;
+            default:
+            returnItem.ItemName = "";
+            break;
+        }
+        return returnItem;
+    }
+    private bool ConfirmOrder(int itemsInOrder)
+    {
+        itemsInOrder += UnityEngine.Random.Range(0,5);
+
+        if (itemsInOrder >= 3)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void AddItem(OrderStruct orderItem, bool orderConfimed)
+    {
+        orderList.Add(orderItem);
+        if (orderConfimed)
+        {
+            foreach (OrderStruct target in orderItem)
+            {
+                Debug.Log(orderItem.ItemName + orderItem.Quantity);
+            }
+        }
     }
 }
