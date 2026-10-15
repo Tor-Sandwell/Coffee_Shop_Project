@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 public class Customer : MonoBehaviour
 {
@@ -65,10 +64,14 @@ public class Customer : MonoBehaviour
         orderList.Add(orderItem);
         if (orderConfimed)
         {
-            foreach (OrderStruct target in orderItem)
+            foreach (OrderStruct orderedItem in orderList)
             {
-                Debug.Log(orderItem.ItemName + orderItem.Quantity);
+                Debug.Log(orderedItem.ItemName + " " + orderedItem.Quantity);
             }
         }
+    }
+    void Start()
+    {
+        Order();
     }
 }

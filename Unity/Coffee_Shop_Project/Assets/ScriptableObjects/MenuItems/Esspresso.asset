@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ec08a6a8366f84c9fa3976afdca0c5, type: 3}
+  m_Name: Esspresso
+  m_EditorClassIdentifier: Assembly-CSharp::MenuItemsData
+  ingredients:
+  - {fileID: 11400000, guid: f19a60052957ef1428071cb5dad29fdb, type: 2}
+  - {fileID: 11400000, guid: b9a6be8f3d918d04a81e73266d650392, type: 2}
