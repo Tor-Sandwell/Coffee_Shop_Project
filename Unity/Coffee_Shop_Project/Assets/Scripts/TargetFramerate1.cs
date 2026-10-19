@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class TargetFramerate : MonoBehaviour
+public class Framerate : MonoBehaviour
 {
+    public int FrameTarget = 60;
     private void Awake()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = FrameTarget;
     }
 }
