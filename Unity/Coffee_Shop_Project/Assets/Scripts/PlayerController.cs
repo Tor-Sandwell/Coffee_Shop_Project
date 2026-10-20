@@ -7,11 +7,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float walkSpeed = 5.5f;
     [SerializeField] private float runSpeed = 9f;
 
-    [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float gravity = 20f;
+    [SerializeField] private float jumpForce = 2f;
+    [SerializeField] private float gravity = 9.81f;
 
     [SerializeField] private float cameraSensitivity = 0.2f;
     [SerializeField] private float cameraAngleLimit = 70f;
+
+    private float ySpeed;
 
     private Camera mainCamera;
     private CharacterController characterController;
@@ -70,6 +72,7 @@ public class PlayerController : MonoBehaviour
         if (jumped && characterController.isGrounded)
         {
             moveDirection.y = jumpForce;
+            ySpeed = 0f;
         }
         else
         {
