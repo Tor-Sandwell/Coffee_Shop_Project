@@ -13,6 +13,7 @@ public class Customer : MonoBehaviour
     public float orderCost;
     public float customerCoins;
     private float tip;
+    [SerializeField] private MenuItems menuItems;
     void Order()
     {
         customerCoins = UnityEngine.Random.Range(6f, 15f);
@@ -33,27 +34,27 @@ public class Customer : MonoBehaviour
     }
     private OrderStruct RandomItem(float _orderCost)
     {
-        int quantity = UnityEngine.Random.RandomRange(1, 4);
+        int quantity = UnityEngine.Random.Range(1, 4);
         OrderStruct returnItem;
         returnItem.Quantity = quantity;
-        int itemID = UnityEngine.Random.RandomRange(0, 4);
+        int itemID = UnityEngine.Random.Range(0, 4);
         switch (itemID)
         {
             case 0:
-            returnItem.ItemName = "esspresso";
-            returnItem.ItemCost = _orderCost + 3f * quantity;
+            returnItem.ItemName = menuItems.item0;
+            returnItem.ItemCost = _orderCost + menuItems.item0Price * quantity;
             break;
             case 1:
-            returnItem.ItemName = "tea";
-            returnItem.ItemCost = _orderCost + 2.5f * quantity;
+            returnItem.ItemName = menuItems.item1;
+            returnItem.ItemCost = _orderCost + menuItems.item1Price * quantity;
             break;
             case 2:
-            returnItem.ItemName = "iced coffee";
-            returnItem.ItemCost = _orderCost + 3f * quantity;
+            returnItem.ItemName = menuItems.item2;
+            returnItem.ItemCost = _orderCost + menuItems.item2Price * quantity;
             break;
             case 3:
-            returnItem.ItemName = "donut";
-            returnItem.ItemCost = _orderCost + 3.5f * quantity;
+            returnItem.ItemName = menuItems.item3;
+            returnItem.ItemCost = _orderCost + menuItems.item3Price * quantity;
             break;
             default:
             returnItem.ItemName = "";
