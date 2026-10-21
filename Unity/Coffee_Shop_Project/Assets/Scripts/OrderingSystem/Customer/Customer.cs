@@ -14,8 +14,10 @@ public class Customer : MonoBehaviour
     public float customerCoins;
     private float tip;
     [SerializeField] private MenuItems menuItems;
+
     void Order()
     {
+        orderList.Clear();
         customerCoins = UnityEngine.Random.Range(6f, 15f);
         customerCoins *= 100;
         customerCoins = Mathf.Round(customerCoins);
@@ -31,6 +33,7 @@ public class Customer : MonoBehaviour
             orderCost = _item.ItemCost;
             AddItem(_item, _orderConfirmed, orderCost, customerCoins);
         }
+
     }
     private OrderStruct RandomItem(float _orderCost)
     {
@@ -63,6 +66,7 @@ public class Customer : MonoBehaviour
         }
         return returnItem;
     }
+
     private bool ConfirmOrder(int itemsInOrder)
     {
         itemsInOrder += UnityEngine.Random.Range(0,5);
@@ -76,6 +80,7 @@ public class Customer : MonoBehaviour
             return false;
         }
     }
+
     public void AddItem(OrderStruct orderItem, bool orderConfimed, float _orderCost, float customerCoins)
     {
         orderList.Add(orderItem);
@@ -103,6 +108,7 @@ public class Customer : MonoBehaviour
             }
         }
     }
+
     private bool willTip()
     {
         int temp = UnityEngine.Random.Range(0, 4);
@@ -112,6 +118,7 @@ public class Customer : MonoBehaviour
         }
         return false;
     }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))

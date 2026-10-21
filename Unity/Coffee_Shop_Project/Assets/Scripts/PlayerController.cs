@@ -1,4 +1,3 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        transform.Rotate(0, 0, 0);
         mainCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
 
