@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
 
-public class Customer : MonoBehaviour
+public class CreateOrder : MonoBehaviour
 {
     List<OrderStruct> orderList = new List<OrderStruct>();
     private string _drinkType;
@@ -10,12 +10,12 @@ public class Customer : MonoBehaviour
     private bool _orderConfirmed;
     private OrderStruct _item;
     private int _itemsInOrder;
-    public float orderCost;
-    public float customerCoins;
+    private float orderCost;
+    private float customerCoins;
     private float tip;
     [SerializeField] private MenuItems menuItems;
 
-    void Order()
+    public void Order() 
     {
         orderList.Clear();
         customerCoins = UnityEngine.Random.Range(6f, 15f);
@@ -117,13 +117,5 @@ public class Customer : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            Order();
-        }
     }
 }

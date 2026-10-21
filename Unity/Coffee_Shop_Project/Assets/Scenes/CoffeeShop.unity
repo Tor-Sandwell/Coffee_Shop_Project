@@ -924,53 +924,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1295433127}
   m_SourcePrefab: {fileID: 100100000, guid: d26e29278b3aa0e42a3d8b7e59375966, type: 3}
---- !u!1 &2112466958
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2112466960}
-  - component: {fileID: 2112466959}
-  m_Layer: 0
-  m_Name: npcSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2112466959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112466958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 743a6d99c61fe8a4fb55e54309175ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCSpawner
-  npcHitbox: {fileID: 2136634923}
-  npcMesh: {fileID: 2136634922}
-  npcObject: {fileID: 2136634921}
---- !u!4 &2112466960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112466958}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.26637, y: 1.16156, z: -9.70667}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125290525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,8 +1015,10 @@ GameObject:
   - component: {fileID: 2136634924}
   - component: {fileID: 2136634922}
   - component: {fileID: 2136634923}
+  - component: {fileID: 2136634926}
+  - component: {fileID: 2136634927}
   m_Layer: 0
-  m_Name: NPC 1
+  m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1158,12 +1113,40 @@ Transform:
   m_GameObject: {fileID: 2136634921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 1, z: -10}
+  m_LocalPosition: {x: 5.5, y: 1, z: -2.357}
   m_LocalScale: {x: 0.75, y: 1, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136634926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136634921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743a6d99c61fe8a4fb55e54309175ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCSpawner
+  npcHitbox: {fileID: 2136634923}
+  npcMesh: {fileID: 2136634922}
+  npcObject: {fileID: 2136634921}
+--- !u!114 &2136634927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136634921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fbb17a444e5504ba15aff9200c97a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreateOrder
+  menuItems: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1174,4 +1157,3 @@ SceneRoots:
   - {fileID: 1523898138}
   - {fileID: 1332862175}
   - {fileID: 2136634925}
-  - {fileID: 2112466960}
