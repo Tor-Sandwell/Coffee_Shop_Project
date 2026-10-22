@@ -13,10 +13,13 @@ public class CreateOrder : MonoBehaviour
     private float orderCost;
     private float customerCoins;
     private float tip;
+    private int _orderNumber = 0;
+    [SerializeField] private NPCSpawner npcSpawner;
     [SerializeField] private MenuItems menuItems;
 
     public void Order() 
     {
+        _orderNumber ++;
         orderList.Clear();
         customerCoins = UnityEngine.Random.Range(6f, 15f);
         customerCoins *= 100;
@@ -86,26 +89,7 @@ public class CreateOrder : MonoBehaviour
         orderList.Add(orderItem);
         if (orderConfimed)
         {
-            if (willTip())
-            {
-                tip = UnityEngine.Random.Range(_orderCost/20, _orderCost/5);
-                tip *= 100;
-                tip = Mathf.Round(tip);
-                tip /= 100;
-            }
-            if (customerCoins > orderCost)
-            {
-                foreach (OrderStruct orderedItem in orderList)
-                {
-                    Debug.Log(orderedItem.ItemName + " x " + orderedItem.Quantity);
-                }
-                Debug.Log("Price " + _orderCost);
-                Debug.Log("tip " + tip);
-            }
-            else
-            {
-                Debug.Log("customer does not have enough coins");
-            }
+           SendOrder(orderItem, _orderCost, customerCoins);
         }
     }
 
@@ -117,5 +101,34 @@ public class CreateOrder : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void SendOrder(OrderStruct orderItem, float _orderCost, float customerCoins)
+    {
+        if (willTip())
+        {
+            tip = UnityEngine.Random.Range(_orderCost/20, _orderCost/5);
+            tip *= 100;
+            tip = Mathf.Round(tip);
+            tip /= 100;
+        }
+        if (customerCoins > orderCost)
+        {
+            foreach (OrderStruct orderedItem in orderList)
+            {
+                Debug.Log(orderedItem.ItemName + " x " + orderedItem.Quantity);
+            }
+            Debug.Log("Price " + _orderCost);
+            Debug.Log("tip " + tip);
+        }
+        else
+        {
+            Debug.Log("customer does not have enough coins");
+        }
+        if (_orderNumber < 3)
+        {
+            Debug.Log("-------------------------------------------------------------------------------------");
+            npcSpawner.CustomerSpawner();
+        }
     }
 }

@@ -19,8 +19,15 @@ public class NPCSpawner : MonoBehaviour
         StartCoroutine(SpawnCustomer());
     }
 
+    public void CustomerSpawner()
+    {
+        StartCoroutine(SpawnCustomer());
+    }
     IEnumerator SpawnCustomer()
     {
+        yield return new WaitForSeconds(1f);
+        npcHitbox.enabled = false;
+        npcMesh.enabled = false;
         yield return new WaitForSeconds(1.5f);
         npcHitbox.enabled = true;
         npcMesh.enabled = true;
