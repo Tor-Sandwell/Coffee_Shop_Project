@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4783c535c3a3a45b4d6873ac37f6e8, type: 3}
   m_Name: MenuItems
   m_EditorClassIdentifier: Assembly-CSharp::MenuItems
-  item0: espersso
-  item1: cola
-  item2: cake
-  item3: donut
+  item0: Espresso
+  item1: Cola
+  item2: Cake
+  item3: Donut
   item0Price: 2.99
   item1Price: 1.99
   item2Price: 2.49

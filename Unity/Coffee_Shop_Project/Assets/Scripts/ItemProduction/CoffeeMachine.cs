@@ -1,23 +1,31 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class CoffeeMachine : MonoBehaviour
 {
-    [SerializeField] private PlayerInventory playerInventory;
-    void MakeCoffee()
+    private GameObject coffeeMachineClickbox;
+    public TextMeshProUGUI currentItemText;
+    public TextMeshProUGUI ProgressText;
+    public void MakeCoffee()
     {
-        // bool itemExistence = playerInventory.doesItemExist;
-        // if (doesItemExist == false)
-        // {
-        //     doesItemExist == true;
-        //     StartCoroutine(MakeACoffee());
-        // }
+        if (!ItemTracker.doesItemExist)
+        {
+            ItemTracker.doesItemExist = true;
+            StartCoroutine(MakeACoffee());
+        }
     }
     
     IEnumerator MakeACoffee()
     {
-        Debug.Log("coffee started");
+        ProgressText.text = "Making Coffee...";
+        ProgressText.gameObject.SetActive(true);  
         yield return new WaitForSeconds(3.5f);
-        Debug.Log("Coffee Finished");
+        ItemTracker.currentItem = "Espresso";
+        Debug.Log("ItemTracker.currentItem: " + ItemTracker.currentItem);
+        currentItemText.text = "Current Item: " + ItemTracker.currentItem;
+        ProgressText.text = "Coffee is ready!";
+        yield return new WaitForSeconds(.5f);
+        ProgressText.gameObject.SetActive(false);
     }
 }

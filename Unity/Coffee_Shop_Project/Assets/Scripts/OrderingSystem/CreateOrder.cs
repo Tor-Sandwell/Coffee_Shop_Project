@@ -1,19 +1,27 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using TMPro;
 
 public class CreateOrder : MonoBehaviour
 {
     private OrderStruct _item;
     private int _orderNumber = 0;
+
+    public  TextMeshProUGUI currentOrderText;
+
     [SerializeField] private NPCSpawner npcSpawner;
     [SerializeField] private MenuItems menuItems;
+
+    [SerializeField] private GameObject CoffeeMachine;
+    [SerializeField] private GameObject ColaMachine;
+    [SerializeField] private GameObject Cake;
+    [SerializeField] private GameObject Donut;
 
     public void Order() 
     {
         _orderNumber++;
         _item = RandomItem();
-        string testLog = _item.ItemName;
         SendOrder(_item);
     }
 
@@ -49,10 +57,30 @@ public class CreateOrder : MonoBehaviour
 
     void SendOrder(OrderStruct orderItem)
     {
-        if (_orderNumber < 3)
+        currentOrderText.text = "Current Order: " + orderItem.ItemName;
+        switch (orderItem.ItemName)
         {
-            npcSpawner.CustomerSpawner();
+            case "Espresso":
+                Debug.Log("test0");
+                ItemTracker.currentOrder = "Espresso";
+                CoffeeMachine.SetActive(true);
+                break;
+            case "Cola":
+                ItemTracker.currentOrder = "Cola";
+                ColaMachine.SetActive(true);
+                break;
+            case "Cake":
+                ItemTracker.currentOrder = "Cake"; 
+                Cake.SetActive(true);
+                break;
+            case "Donut":
+                ItemTracker.currentOrder = "Donut";
+                Donut.SetActive(true);
+                break;
+            default:
+            Debug.Log(orderItem.ItemName);
+                ItemTracker.currentOrder = "";
+                break;
         }
-        Debug.Log(orderItem.ItemName);
     }
 }

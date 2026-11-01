@@ -1,16 +1,32 @@
 using UnityEngine;
+using System.Collections;
+using TMPro;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Cake : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private GameObject cakeMachineClickbox;
+    public TextMeshProUGUI currentItemText;
+    public TextMeshProUGUI ProgressText;
+    public void MakeCake()
     {
-        
+        Debug.Log("MakeCake() called");
+        if (!ItemTracker.doesItemExist)
+        {
+            ItemTracker.doesItemExist = true;
+            StartCoroutine(MakeACake());
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    IEnumerator MakeACake()
     {
-        
+        ProgressText.text = "Collecting Cake...";
+        ProgressText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        ItemTracker.currentItem = "Cake";
+        Debug.Log("ItemTracker.currentItem: " + ItemTracker.currentItem);
+        currentItemText.text = "Current Item: " + ItemTracker.currentItem;
+        ProgressText.text = "Cake is ready!";
+        yield return new WaitForSeconds(.5f);
+        ProgressText.gameObject.SetActive(false);
     }
 }

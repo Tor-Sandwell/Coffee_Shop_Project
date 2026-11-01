@@ -9,6 +9,5 @@ public class ClickableObject : MonoBehaviour, IClickable
     public void OnClick()
     {
         onClickAction?.Invoke();
-        Debug.Log("Found Clickable Object");
     }
 }
