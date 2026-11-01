@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: MenuItems
   m_EditorClassIdentifier: Assembly-CSharp::MenuItems
   item0: espersso
-  item1: tea
-  item2: icedCoffee
+  item1: cola
+  item2: cake
   item3: donut
   item0Price: 2.99
   item1Price: 1.99
-  item2Price: 3.49
+  item2Price: 2.49
   item3Price: 2.99
