@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 95536696}
   - component: {fileID: 95536695}
   - component: {fileID: 95536699}
+  - component: {fileID: 95536700}
   m_Layer: 0
   m_Name: CokeMachineClickbox
   m_TagString: Untagged
@@ -592,6 +593,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CokeMachine
   currentItemText: {fileID: 976532103}
   ProgressText: {fileID: 184053864}
+--- !u!114 &95536700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95536694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!4 &96462254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 438e5eea4389f5d12a186fc6dfe0805f, type: 3}
@@ -1546,6 +1561,7 @@ GameObject:
   - component: {fileID: 244849275}
   - component: {fileID: 244849274}
   - component: {fileID: 244849273}
+  - component: {fileID: 244849279}
   m_Layer: 0
   m_Name: ClearItemClickbox
   m_TagString: Untagged
@@ -1679,13 +1695,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244849272}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6647034, y: 2.0018005, z: -0.062799394}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000058114523}
+  m_LocalPosition: {x: 216.3353, y: -245.9982, z: 0.06254795}
   m_LocalScale: {x: 0.3962304, y: 0.08632775, z: 0.15147}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1509732051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244849279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244849272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!4 &248531758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ec79863e6106894ed94ec40010b06350, type: 3}
@@ -3274,6 +3304,7 @@ GameObject:
   - component: {fileID: 634158244}
   - component: {fileID: 634158243}
   - component: {fileID: 634158247}
+  - component: {fileID: 634158248}
   m_Layer: 0
   m_Name: CakeClickbox
   m_TagString: Untagged
@@ -3366,6 +3397,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Cake
   currentItemText: {fileID: 976532103}
   ProgressText: {fileID: 184053864}
+--- !u!114 &634158248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634158242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!1001 &636988420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4598,7 +4643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &944100091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4676,6 +4721,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1600635689}
+  - {fileID: 1572913159}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4805,7 +4851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 76, y: 30.277588}
+  m_AnchoredPosition: {x: 76, y: 66}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976532103
@@ -5319,6 +5365,7 @@ GameObject:
   - component: {fileID: 1119534761}
   - component: {fileID: 1119534762}
   - component: {fileID: 1119534763}
+  - component: {fileID: 1119534764}
   m_Layer: 0
   m_Name: PlayerLocation1
   m_TagString: Untagged
@@ -5487,6 +5534,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1119534764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119534756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!4 &1165121351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 438e5eea4389f5d12a186fc6dfe0805f, type: 3}
@@ -5716,6 +5777,7 @@ GameObject:
   - component: {fileID: 1181888357}
   - component: {fileID: 1181888356}
   - component: {fileID: 1181888360}
+  - component: {fileID: 1181888361}
   m_Layer: 0
   m_Name: CustomerClickbox
   m_TagString: Untagged
@@ -5810,10 +5872,25 @@ MonoBehaviour:
   npcSpawner: {fileID: 1534048764}
   npcMesh: {fileID: 1534048761}
   NPCClickbox: {fileID: 1181888357}
+  Reset: {fileID: 944100090}
   currentOrderText: {fileID: 2126269328}
   currentItemText: {fileID: 976532103}
   orderNumberText: {fileID: 1275107222}
   FeedbackText: {fileID: 1307110238}
+--- !u!114 &1181888361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181888355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!1001 &1201509020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5902,7 +5979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1214699838}
-  - component: {fileID: 1214699837}
+  - component: {fileID: 1214699839}
   m_Layer: 0
   m_Name: FPS_Limiter
   m_TagString: Untagged
@@ -5910,18 +5987,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1214699837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214699836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1673ba2dfbcfa34f9c63bc9f3860b6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TargetFramerate
 --- !u!4 &1214699838
 Transform:
   m_ObjectHideFlags: 0
@@ -5937,6 +6002,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1214699839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214699836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1ea0c46492cfb4192308d1c0b1a4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Framerate
+  FrameTarget: 240
 --- !u!4 &1215685893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 438e5eea4389f5d12a186fc6dfe0805f, type: 3}
@@ -6970,6 +7048,7 @@ GameObject:
   - component: {fileID: 1340949699}
   - component: {fileID: 1340949698}
   - component: {fileID: 1340949700}
+  - component: {fileID: 1340949701}
   m_Layer: 0
   m_Name: PlayerLocation
   m_TagString: Untagged
@@ -7138,6 +7217,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1340949701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340949693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!4 &1343341641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2de5add07574797df9c04f7be8afa4df, type: 3}
@@ -7234,6 +7327,7 @@ GameObject:
   - component: {fileID: 1363704892}
   - component: {fileID: 1363704891}
   - component: {fileID: 1363704895}
+  - component: {fileID: 1363704896}
   m_Layer: 0
   m_Name: CoffeeMachineClickbox
   m_TagString: Untagged
@@ -7326,6 +7420,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoffeeMachine
   currentItemText: {fileID: 976532103}
   ProgressText: {fileID: 184053864}
+--- !u!114 &1363704896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363704890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!1001 &1377235002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8157,6 +8265,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1559119213}
+  - {fileID: 244849278}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8177,6 +8286,7 @@ GameObject:
   - component: {fileID: 1517604185}
   - component: {fileID: 1517604184}
   - component: {fileID: 1517604188}
+  - component: {fileID: 1517604189}
   m_Layer: 0
   m_Name: DonutClickbox
   m_TagString: Untagged
@@ -8269,6 +8379,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Donut
   currentItemText: {fileID: 976532103}
   ProgressText: {fileID: 184053864}
+--- !u!114 &1517604189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517604183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!4 &1521410929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ec79863e6106894ed94ec40010b06350, type: 3}
@@ -8368,6 +8492,7 @@ MonoBehaviour:
   npcMesh: {fileID: 1534048761}
   NPCClickbox: {fileID: 1181888357}
   npcObject: {fileID: 1534048760}
+  orderActive: 0
 --- !u!114 &1534048765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8772,7 +8897,8 @@ GameObject:
   - component: {fileID: 1572913157}
   - component: {fileID: 1572913156}
   - component: {fileID: 1572913161}
-  - component: {fileID: 1572913160}
+  - component: {fileID: 1572913162}
+  - component: {fileID: 1572913163}
   m_Layer: 0
   m_Name: ResetClickbox
   m_TagString: Untagged
@@ -8866,26 +8992,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572913155}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6647, y: 2.0018, z: -0.06279939}
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0.00000058114523}
+  m_LocalPosition: {x: 216.942, y: -245.9982, z: 0.06254724}
   m_LocalScale: {x: 0.3962304, y: 0.08632775, z: 0.15147}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 944100094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1572913160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572913155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaa5c7b6a3011563ea37e7c4d6fa2bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bin
-  currentItemText: {fileID: 976532103}
 --- !u!114 &1572913161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8901,9 +9014,9 @@ MonoBehaviour:
   onClickAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1572913160}
-        m_TargetAssemblyTypeName: Bin, Assembly-CSharp
-        m_MethodName: BinItem
+      - m_Target: {fileID: 1572913162}
+        m_TargetAssemblyTypeName: Reset, Assembly-CSharp
+        m_MethodName: GameReset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8913,6 +9026,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1572913162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572913155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f548a7a602450e2b1ac347947a02b8f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Reset
+  currentOrderText: {fileID: 2126269328}
+  currentItemText: {fileID: 976532103}
+  orderNumberText: {fileID: 1275107222}
+  FeedbackText: {fileID: 1307110238}
+  ProgressText: {fileID: 184053864}
+  npcSpawner: {fileID: 1534048764}
+  checkOrder: {fileID: 1181888360}
+  ResetButton: {fileID: 944100090}
+--- !u!114 &1572913163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572913155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e887339eba8968a7b6dfa1fac7529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverChecker
+  hoverCrossHair: {fileID: 1694327218}
+  crossHair: {fileID: 1310045710}
 --- !u!1001 &1595628380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9016,7 +9163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 217.35611, y: -246.10706}
+  m_AnchoredPosition: {x: 217.436, y: -246.10706}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600635690
@@ -9039,7 +9186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Clear Item
+  m_text: Reset
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9180,7 +9327,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 960, y: 540}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -9225,6 +9372,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1310045711}
+  - {fileID: 1694327221}
   - {fileID: 2126269327}
   - {fileID: 1275107221}
   - {fileID: 976532102}
@@ -9540,6 +9688,78 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 438e5eea4389f5d12a186fc6dfe0805f, type: 3}
+--- !u!1 &1694327218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694327221}
+  - component: {fileID: 1694327220}
+  - component: {fileID: 1694327219}
+  m_Layer: 5
+  m_Name: HoverCrossHair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1694327219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694327218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 03d50283ab2599f83b23198660727079, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1694327220
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694327218}
+  m_CullTransparentMesh: 1
+--- !u!224 &1694327221
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694327218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1632159479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1696586515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ec79863e6106894ed94ec40010b06350, type: 3}
@@ -11275,5 +11495,3 @@ SceneRoots:
   - {fileID: 1517604187}
   - {fileID: 944100094}
   - {fileID: 1509732051}
-  - {fileID: 1572913159}
-  - {fileID: 244849278}

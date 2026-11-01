@@ -22,7 +22,6 @@ public class CoffeeMachine : MonoBehaviour
         ProgressText.gameObject.SetActive(true);  
         yield return new WaitForSeconds(3.5f);
         ItemTracker.currentItem = "Espresso";
-        Debug.Log("ItemTracker.currentItem: " + ItemTracker.currentItem);
         currentItemText.text = "Current Item: " + ItemTracker.currentItem;
         ProgressText.text = "Coffee is ready!";
         yield return new WaitForSeconds(.5f);
