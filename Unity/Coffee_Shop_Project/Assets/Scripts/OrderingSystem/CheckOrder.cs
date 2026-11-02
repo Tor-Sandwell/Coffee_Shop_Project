@@ -27,7 +27,7 @@ public class CheckOrder : MonoBehaviour
                 npcSpawner.orderActive = false;
                 ItemTracker.doesItemExist = false;
                 ItemTracker.currentItem = "";
-                ItemTracker.currentOrder = "";
+                ItemTracker.currentOrder = " ";
                 currentOrderText.text = "Current Order: ";
                 currentItemText.text = "Current Item: ";
 
@@ -57,7 +57,6 @@ public class CheckOrder : MonoBehaviour
                 FeedbackText.text = "Incorrect or missing Order!";
                 FeedbackText.color = Color.red;
                 StartCoroutine(FeedbackTextCoroutine());
-
             }
         }
         else
